@@ -42,10 +42,7 @@ module.exports = function check(braces, bracketsConfig) {
             iterration = false;
             
         }
-        
-        if( iterration){
-          return false;
-        }
+
         iterration = true;
     }
 
