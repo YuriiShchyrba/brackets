@@ -16,7 +16,7 @@ module.exports = function check(braces, bracketsConfig) {
     {
       arr.push(braces[i]);
     }
-    else if ( braces[i] == config.get(arr[arr.length]))
+    else if ( braces[i] == config.get(arr[arr.length-1]))
     {
       arr.pop();
     }
