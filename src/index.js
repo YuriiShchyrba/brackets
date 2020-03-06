@@ -21,11 +21,13 @@ module.exports = function check(braces, bracketsConfig) {
             if (braces[i]== config.get(braces[i]) && check) {
                 arr.push(braces[i]);
                 check = false;
+                iterration = false;
             }
             else if (braces[i] != config.get(braces[i]))  {
                 arr.push(braces[i]);
+                iterration = false;
             }
-            iterration = false;
+            
         }
         if (braces[i] == config.get(arr[arr.length - 1]) && iterration) {
 
