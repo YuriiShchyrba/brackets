@@ -1,4 +1,4 @@
-module.exports = function check(str, bracketsConfig) {
+module.exports = function check(braces, bracketsConfig) {
   var sum = 0;
     if (braces[0] == "}" || braces[0] == "]" || braces[0] == ")") return false;
     var map = { "{": "}", "[": "]", "(": ")" };
