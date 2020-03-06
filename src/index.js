@@ -31,7 +31,7 @@ module.exports = function check(braces, bracketsConfig) {
         }
         if (braces[i] == config.get(arr[arr.length - 1]) && iterration) {
 
-            for (var k in config.keys()) {
+            for (var k of config.keys()) {
                 if (k == braces[i] && !check) {
                     check = true;
                 }
