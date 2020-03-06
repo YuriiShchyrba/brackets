@@ -9,10 +9,15 @@ module.exports = function check(braces, bracketsConfig) {
     }
 
 
-    var check = true;
+    var check = true, iterration = true;
     for (var i = 0; i < braces.length; i++) {
 
-        if (config.has(braces[i])) {
+
+        var one = braces[i];
+        var two = config.has(braces[i]);
+        var tree = config.get(braces[i]);
+        var four = config.get(arr[arr.length - 1]);
+        if (config.has(braces[i]) && iterration) {
             if (braces[i]== config.get(braces[i]) && check) {
                 arr.push(braces[i]);
                 check = false;
@@ -20,9 +25,9 @@ module.exports = function check(braces, bracketsConfig) {
             else if (braces[i] != config.get(braces[i]))  {
                 arr.push(braces[i]);
             }
-            
+            iterration = false;
         }
-       if (braces[i] == config.get(arr[arr.length - 1])) {
+        if (braces[i] == config.get(arr[arr.length - 1]) && iterration) {
 
             for (var k in config.keys()) {
                 if (k == braces[i] && !check) {
@@ -30,10 +35,12 @@ module.exports = function check(braces, bracketsConfig) {
                 }
             }
 
-            arr.pop();
+               arr.pop();
+
+            iterration = false;
             
         }
-
+        iterration = true;
     }
 
     if (arr.length == 0) return true;
