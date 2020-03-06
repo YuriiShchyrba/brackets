@@ -33,6 +33,10 @@ module.exports = function check(braces, bracketsConfig) {
             arr.pop();
             
         }
+        else
+        {
+          return false;
+        }
     }
 
     if (arr.length == 0) return true;
