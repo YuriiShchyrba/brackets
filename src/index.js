@@ -42,6 +42,9 @@ module.exports = function check(braces, bracketsConfig) {
             iterration = false;
             
         }
+        else{
+          return false;
+        }
         iterration = true;
     }
 
